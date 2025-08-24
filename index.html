@@ -3,9 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Rodrigo Ochoa Hernández</title>
+  <style>
+    /* ===== Estilos generales ===== */
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* ===== Tarjeta principal ===== */
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    /* ===== Nombre ===== */
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #1a2a6c; /* Azul marino */
+    }
+
+    /* ===== Subtítulo ===== */
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* ===== Links ===== */
+    .links a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1a2a6c;
+      font-weight: 500;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Botón CV ===== */
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: #1a2a6c;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #0f1840;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, soy Rodrigo</h1>
-  <p>Bienvenido a mi página personal.</p>
+  <div class="container">
+    <h1>Rodrigo Ochoa Hernández</h1>
+    <h2>Lic. en Economía — UNAM</h2>
+    
+    <div class="links">
+      <a href="mailto:rodrigoochoahe@gmail.com">📧 Correo</a>
+      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">🔗 LinkedIn</a>
+    </div>
+
+    <a class="button" href="cv.pdf" target="_blank">📄 Ver mi CV</a>
+  </div>
 </body>
 </html>
