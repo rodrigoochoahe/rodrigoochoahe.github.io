@@ -11,6 +11,30 @@
       padding: 0;
       background: #f0f2f5;
       color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* ===== Barra superior de botones ===== */
+    .topbar {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 20px;
+      gap: 10px;
+    }
+    .topbar button {
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .topbar button:hover {
+      background: #666;
     }
 
     /* ===== Header ===== */
@@ -48,6 +72,7 @@
       margin: 40px auto;
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
     }
     .hero img {
       width: 180px;
@@ -115,7 +140,7 @@
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       padding: 25px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -147,24 +172,40 @@
       font-size: 0.95rem;
     }
 
-    /* ===== Desktop Enhancements ===== */
+    /* ===== Dark Mode ===== */
+    body.dark {
+      background: #1e1e1e;
+      color: #ddd;
+    }
+    body.dark header, body.dark footer, body.dark .topbar {
+      background: #111;
+      color: #ddd;
+    }
+    body.dark .hero, body.dark .card {
+      background: #2a2a2a;
+      color: #ddd;
+    }
+    body.dark nav a {
+      color: #ddd;
+    }
+
+    /* ===== Responsive ===== */
     @media(min-width: 1024px){
-      nav {
-        gap: 50px;
-      }
-      .hero h1 {
-        font-size: 3.5rem;
-      }
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-      .hero p {
-        font-size: 1.15rem;
-      }
+      nav { gap: 50px; }
+      .hero h1 { font-size: 3.5rem; }
+      .hero h2 { font-size: 1.5rem; }
+      .hero p { font-size: 1.15rem; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ===== Barra de botones ===== -->
+  <div class="topbar">
+    <button onclick="setLanguage('es')">Español</button>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="toggleMode()">🌞/🌙</button>
+  </div>
 
   <!-- ===== Header ===== -->
   <header>
@@ -181,85 +222,38 @@
   <!-- ===== Hero ===== -->
   <section class="hero" id="inicio">
     <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
-    <h1>Rodrigo Ochoa Hernández</h1>
-    <h2>Economista</h2>
-    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.</p>
+    <h1 id="name">Rodrigo Ochoa Hernández</h1>
+    <h2 id="title">Economista</h2>
+    <p id="intro">Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.</p>
     <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> Correo</a>
+      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> <span id="link-mail">Correo</span></a>
       <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> Ver CV</a>
+      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> <span id="link-cv">Ver CV</span></a>
     </div>
   </section>
 
-  <!-- ===== Sobre mí ===== -->
-  <section id="sobre-mi">
-    <h3>Sobre mí</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-account icon"></i>
-        <h4>Perfil</h4>
-        <p>Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-chart-line icon"></i>
-        <h4>Áreas de interés</h4>
-        <ul>
-          <li>Macroeconomía</li>
-          <li>Política fiscal</li>
-          <li>Finanzas públicas</li>
-          <li>Presupuesto público</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <!-- ===== Scripts ===== -->
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
 
-  <!-- ===== Experiencia ===== -->
-<section id="experiencia">
-  <h3>Experiencia</h3>
-  <div class="card-container">
-    <div class="card">
-      <i class="mdi mdi-briefcase icon"></i>
-      <h4>Asistente de Investigación</h4>
-      <p><strong>Seminario de Credibilidad Macroeconómica, SCM</strong><br>febrero 2024 – febrero 2025<br>...</p>
-    </div>
-    
-      <div class="card">
-      <i class="mdi mdi-briefcase icon"></i>
-      <h4>Becario</h4>
-      <p><strong>Programa Universitario de Estudios del Desarrollo, PUED</strong><br>marzo 2024 – mayo 2024<br>...</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- ===== Educación ===== -->
-  <section id="educacion">
-    <h3>Educación</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-school icon"></i>
-        <h4>Licenciatura en Economía</h4>
-        <p><strong>Universidad Nacional Autónoma de México</strong><br>2021 - 2026</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Proyectos ===== -->
-  <section id="proyectos">
-    <h3>Proyectos</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 1</h4>
-        <p>Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 2</h4>
-        <p>Evaluación de impacto de la política presupuestaria en crecimiento económico.</p>
-      </div>
-    </div>
-  </section>
+    function setLanguage(lang) {
+      if (lang === 'en') {
+        document.documentElement.lang = 'en';
+        document.getElementById("title").innerText = "Economist";
+        document.getElementById("intro").innerText = "I am an economist interested in public finance, fiscal policy, and macroeconomic analysis.";
+        document.getElementById("link-mail").innerText = "Email";
+        document.getElementById("link-cv").innerText = "View CV";
+      } else {
+        document.documentElement.lang = 'es';
+        document.getElementById("title").innerText = "Economista";
+        document.getElementById("intro").innerText = "Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.";
+        document.getElementById("link-mail").innerText = "Correo";
+        document.getElementById("link-cv").innerText = "Ver CV";
+      }
+    }
+  </script>
 
   <footer>
     &copy; 2025 Rodrigo Ochoa Hernández — Todos los derechos reservados
