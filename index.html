@@ -3,209 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Rodrigo Ochoa Hernández</title>
-  <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
+    /* ===== Estilos generales ===== */
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f8f9fa;
+      background: #f5f5f5;
       color: #333;
+      line-height: 1.6;
     }
 
-    /* ===== Nav ===== */
-    header {
-      background: #444;
-      color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    nav a {
-      color: white;
+    a {
+      text-decoration: none; /* quita subrayado */
+      color: #1a2a6c;
       font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.7;
     }
 
-    /* ===== Hero ===== */
-    .hero {
+    a:hover {
+      color: #000;
+    }
+
+    /* ===== Cabecera ===== */
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 60px 20px;
-      background: #fff;
     }
-    .hero img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid #ccc;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      margin: 0;
+
+    header h1 {
+      margin: 10px 0;
       font-size: 2.5rem;
-      color: #444;
-    }
-    .hero h2 {
-      font-weight: 400;
-      color: #666;
-      margin: 10px 0 20px;
-    }
-    .hero .links a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      border-radius: 6px;
-      background: #666;
-      color: white;
-      transition: background 0.3s;
-    }
-    .hero .links a:hover {
-      background: #444;
     }
 
-    /* ===== Sections ===== */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h3 {
-      font-size: 1.8rem;
-      color: #444;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #aaa;
-      display: inline-block;
-      padding-bottom: 5px;
+    header h2 {
+      font-weight: normal;
+      margin: 0;
+      font-size: 1.2rem;
+      color: #ddd;
     }
 
-    /* ===== Cards ===== */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 20px;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h4 {
-      margin-top: 0;
-      color: #444;
-    }
-    .card p {
-      color: #555;
-      line-height: 1.5;
-    }
-    .icon {
-      font-size: 2rem;
-      color: #666;
-      margin-bottom: 10px;
+    nav {
+      margin-top: 15px;
     }
 
-    /* ===== Footer ===== */
-    footer {
-      background: #444;
-      color: white;
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f0f0f0;
+    }
+
+    /* ===== Contenedor ===== */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ===== Foto ===== */
+    .foto {
+      display: block;
+      margin: 0 auto 20px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px; /* cuadrada con bordes redondeados */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+      color: #1a2a6c;
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .links {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ===== Header ===== -->
-  <header>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#educacion">Educación</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="inicio">
-    <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
-    <h1>Rodrigo Ochoa Hernández</h1>
-    <h2>Licenciado en Economía — UNAM</h2>
-    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico. Me apasiona el estudio de los mercados y el diseño de estrategias basadas en evidencia para promover desarrollo económico y eficiencia en la gestión pública.</p>
-    <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> Correo</a>
-      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> Ver CV</a>
-    </div>
-  </section>
-
-  <!-- ===== Sobre mí ===== -->
-  <section id="sobre-mi">
-    <h3>Sobre mí</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-account icon"></i>
-        <h4>Perfil</h4>
-        <p>Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-chart-line icon"></i>
-        <h4>Áreas de interés</h4>
-        <p>Política fiscal, finanzas públicas, sostenibilidad presupuestaria, macroeconomía aplicada y desarrollo económico.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Experiencia ===== -->
-  <section id="experiencia">
-    <h3>Experiencia</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-briefcase icon"></i>
-        <h4>Asistente de investigación</h4>
-        <p><strong>Instituto de Investigaciones Económicas, UNAM</strong><br>2023 - 2024<br>Apoyo en proyectos de análisis fiscal y financiero.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Educación ===== -->
-  <section id="educacion">
-    <h3>Educación</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-school icon"></i>
-        <h4>Licenciatura en Economía</h4>
-        <p><strong>Universidad Nacional Autónoma de México</strong><br>2020 - 2024</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Proyectos ===== -->
-  <section id="proyectos">
-    <h3>Proyectos</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 1</h4>
-        <p>Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 2</h4>
-        <p>Evaluación de impacto de la política presupuestaria
+      margin-t
