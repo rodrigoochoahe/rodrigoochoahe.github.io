@@ -2,202 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Rodrigo Ochoa Hernández</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodrigo Ochoa</title>
   <style>
-    /* ===== Estilos generales ===== */
     body {
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f7fa;
-      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      text-align: center;
+      background: #f5f5f5;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===== Cabecera y menú ===== */
     header {
-      background: #1a2a6c;
+      background: #222;
       color: white;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 2rem;
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      font-weight: 500;
-      font-size: 1rem;
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== Sección principal ===== */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 20px;
-      background: #ffffff;
-    }
-
-    .hero img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 4px solid #1a2a6c;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #1a2a6c;
-    }
-
-    .hero h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      color: #444;
-    }
-
-    .hero .links a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: #1a2a6c;
-      color: white;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    .hero .links a:hover {
-      background: #0f1840;
-    }
-
-    /* ===== Secciones ===== */
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    section h3 {
-      font-size: 1.8rem;
-      color: #1a2a6c;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #1a2a6c;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    section li {
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #1a2a6c;
-      color: white;
+    a {
+      color: #007acc;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-  <!-- ===== Cabecera ===== -->
   <header>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#educacion">Educación</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- ===== Sección principal ===== -->
-  <section class="hero" id="inicio">
-    <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
     <h1>Rodrigo Ochoa Hernández</h1>
-    <h2>Licenciado en Economía — UNAM</h2>
-    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico. Me apasiona el estudio de los mercados y el diseño de estrategias basadas en evidencia para promover desarrollo económico y eficiencia en la gestión pública.</p>
-    <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com">📧 Correo</a>
-      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">🔗 LinkedIn</a>
-      <a href="cv.pdf" target="_blank">📄 Ver mi CV</a>
-    </div>
-  </section>
-
-  <!-- ===== Sobre mí ===== -->
-  <section id="sobre-mi">
-    <h3>Sobre mí</h3>
-    <p>Breve resumen de tu trayectoria, habilidades y áreas de interés. Puedes destacar proyectos, investigaciones o logros relevantes.</p>
-  </section>
-
-  <!-- ===== Experiencia ===== -->
-  <section id="experiencia">
-    <h3>Experiencia</h3>
-    <ul>
-      <li><strong>Nombre de la institución o empresa</strong> — Puesto (Año - Año)</li>
-      <li>Descripción breve de responsabilidades y logros.</li>
-    </ul>
-  </section>
-
-  <!-- ===== Educación ===== -->
-  <section id="educacion">
-    <h3>Educación</h3>
-    <ul>
-      <li><strong>Licenciatura en Economía</strong> — UNAM (Año de inicio - Año de término)</li>
-      <li>Otros estudios relevantes, cursos o certificaciones.</li>
-    </ul>
-  </section>
-
-  <!-- ===== Proyectos ===== -->
-  <section id="proyectos">
-    <h3>Proyectos</h3>
-    <ul>
-      <li>Nombre del proyecto — breve descripción.</li>
-      <li>Nombre del proyecto — breve descripción.</li>
-    </ul>
-  </section>
-
-  <!-- ===== Contacto ===== -->
-  <section id="contacto">
-    <h3>Contacto</h3>
-    <p>Puedes escribirme a <a href="mailto:rodrigoochoahe@gmail.com">rodrigoochoahe@gmail.com</a> o conectarte conmigo a través de <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">LinkedIn</a>.</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Rodrigo Ochoa Hernández — Todos los derechos reservados
-  </footer>
-
+    <p>Economista en formación | Interés en política fiscal y finanzas públicas</p>
+  </header>
+  <main>
+    <h2>Sobre mí</h2>
+    <p>Actualmente me preparo para estudios de posgrado y aspiro a trabajar en el FMI.</p>
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
+  </main>
 </body>
 </html>
