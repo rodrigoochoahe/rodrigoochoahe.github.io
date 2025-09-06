@@ -40,7 +40,7 @@
     nav a {
       color: white;
       font-weight: 500;
-      text-decoration: none; /* Sin subrayado */
+      text-decoration: none;
       transition: opacity 0.3s;
     }
     nav a:hover {
@@ -110,7 +110,7 @@
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 0; /* Foto cuadrada */
+      border-radius: 0;
       border: 4px solid #ccc;
       margin-bottom: 20px;
     }
@@ -220,11 +220,8 @@
     <div class="switches">
       <!-- Idioma -->
       <div class="lang-toggle">
-        ES | EN
-        <label class="switch">
-          <input type="checkbox" id="langSwitch">
-          <span class="slider"></span>
-        </label>
+        <span id="esBtn" style="cursor:pointer;">ES</span> | 
+        <span id="enBtn" style="cursor:pointer;">EN</span>
       </div>
       <!-- Modo -->
       <div class="lang-toggle">
@@ -349,14 +346,18 @@
       document.body.classList.toggle("dark");
     });
 
-    // Switch idioma
-    const langSwitch = document.getElementById("langSwitch");
-    langSwitch.addEventListener("change", () => {
-      const lang = langSwitch.checked ? "en" : "es";
+    // Botones de idioma
+    const esBtn = document.getElementById("esBtn");
+    const enBtn = document.getElementById("enBtn");
+
+    function cambiarIdioma(lang) {
       document.querySelectorAll("[data-" + lang + "]").forEach(el => {
         el.innerHTML = el.getAttribute("data-" + lang);
       });
-    });
+    }
+
+    esBtn.addEventListener("click", () => cambiarIdioma("es"));
+    enBtn.addEventListener("click", () => cambiarIdioma("en"));
   </script>
 </body>
 </html>
