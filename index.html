@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>CV - Rodrigo Ochoa Hernández</title>
+  <title>Rodrigo Ochoa Hernández</title>
   <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
     body {
@@ -46,7 +46,8 @@
     .hero img {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
+      object-fit: cover;
+      border-radius: 8px; /* Foto cuadrada */
       border: 4px solid #ccc;
       margin-bottom: 20px;
     }
@@ -74,6 +75,7 @@
       background: #666;
       color: white;
       transition: background 0.3s;
+      text-decoration: none; /* sin subrayado */
     }
     .hero .links a:hover {
       background: #444;
@@ -114,7 +116,7 @@
       margin-top: 0;
       color: #444;
     }
-    .card p {
+    .card p, .card ul {
       color: #555;
       line-height: 1.5;
     }
@@ -150,14 +152,14 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero" id="inicio">
-    <img src="foto.jpg" alt="Foto de perfil">
-    <h1>Tu Nombre Aquí</h1>
-    <h2>Tu título o profesión</h2>
-    <p>Breve descripción tuya en máximo 3–4 líneas.</p>
+    <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
+    <h1>Rodrigo Ochoa Hernández</h1>
+    <h2>Licenciado en Economía — UNAM</h2>
+    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico. Me apasiona el estudio de los mercados y el diseño de estrategias basadas en evidencia para promover desarrollo económico y eficiencia en la gestión pública.</p>
     <div class="links">
-      <a href="#"><i class="mdi mdi-email"></i> Correo</a>
-      <a href="#"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="#"><i class="mdi mdi-file"></i> Ver CV</a>
+      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> Correo</a>
+      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
+      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> Ver CV</a>
     </div>
   </section>
 
@@ -168,12 +170,18 @@
       <div class="card">
         <i class="mdi mdi-account icon"></i>
         <h4>Perfil</h4>
-        <p>Aquí puedes describir tu perfil profesional.</p>
+        <p>Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.</p>
       </div>
       <div class="card">
         <i class="mdi mdi-chart-line icon"></i>
         <h4>Áreas de interés</h4>
-        <p>Aquí pones tus áreas de interés en formato lista.</p>
+        <ul>
+          <li>Política fiscal</li>
+          <li>Finanzas públicas</li>
+          <li>Sostenibilidad presupuestaria</li>
+          <li>Macroeconomía aplicada</li>
+          <li>Desarrollo económico</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -184,13 +192,8 @@
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-briefcase icon"></i>
-        <h4>Puesto 1</h4>
-        <p><strong>Institución/Empresa</strong><br>Años<br>Descripción de actividades.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-briefcase icon"></i>
-        <h4>Puesto 2</h4>
-        <p><strong>Institución/Empresa</strong><br>Años<br>Descripción de actividades.</p>
+        <h4>Asistente de investigación</h4>
+        <p><strong>Instituto de Investigaciones Económicas, UNAM</strong><br>2023 - 2024<br>Apoyo en proyectos de análisis fiscal y financiero.</p>
       </div>
     </div>
   </section>
@@ -201,8 +204,8 @@
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-school icon"></i>
-        <h4>Título académico</h4>
-        <p><strong>Institución</strong><br>Años</p>
+        <h4>Licenciatura en Economía</h4>
+        <p><strong>Universidad Nacional Autónoma de México</strong><br>2020 - 2024</p>
       </div>
     </div>
   </section>
@@ -214,12 +217,12 @@
       <div class="card">
         <i class="mdi mdi-lightbulb-on icon"></i>
         <h4>Proyecto 1</h4>
-        <p>Breve explicación del proyecto.</p>
+        <p>Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.</p>
       </div>
       <div class="card">
         <i class="mdi mdi-lightbulb-on icon"></i>
         <h4>Proyecto 2</h4>
-        <p>Breve explicación del proyecto.</p>
+        <p>Evaluación de impacto de la política presupuestaria en crecimiento económico.</p>
       </div>
     </div>
   </section>
@@ -231,18 +234,18 @@
       <div class="card">
         <i class="mdi mdi-email-outline icon"></i>
         <h4>Email</h4>
-        <p><a href="#">tuemail@ejemplo.com</a></p>
+        <p><a href="mailto:rodrigoochoahe@gmail.com">rodrigoochoahe@gmail.com</a></p>
       </div>
       <div class="card">
         <i class="mdi mdi-linkedin icon"></i>
         <h4>LinkedIn</h4>
-        <p><a href="#">Tu perfil</a></p>
+        <p><a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">Perfil profesional</a></p>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Tu Nombre — Todos los derechos reservados
+    &copy; 2025 Rodrigo Ochoa Hernández — Todos los derechos reservados
   </footer>
 
 </body>
