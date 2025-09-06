@@ -3,261 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <title>Rodrigo Ochoa Hernández</title>
-  <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
+    /* ===== Estilos generales ===== */
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f2f5;
+      background: #f5f7fa;
       color: #333;
       transition: background 0.3s, color 0.3s;
     }
 
-    /* ===== Barra superior de botones ===== */
-    .topbar {
-      background: #222;
-      color: white;
-      display: flex;
-      justify-content: flex-end;
-      padding: 8px 20px;
-      gap: 10px;
-    }
-    .topbar button {
-      background: #444;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 6px 12px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
-    .topbar button:hover {
-      background: #666;
+    body.dark {
+      background: #1c1c1c;
+      color: #f5f5f5;
     }
 
-    /* ===== Header ===== */
-    header {
-      background: #333;
-      color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      font-size: 1rem;
-    }
-    nav a {
-      color: white;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    /* ===== Hero ===== */
-    .hero {
-      text-align: center;
-      padding: 80px 40px;
-      background: #fff;
-      max-width: 1200px;
+    .container {
+      max-width: 900px;
       margin: 40px auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: background 0.3s, color 0.3s;
-    }
-    .hero img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 4px solid #ccc;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #222;
-    }
-    .hero h2 {
-      font-weight: 400;
-      color: #555;
-      margin: 10px 0 25px;
-    }
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      color: #444;
-      line-height: 1.7;
-      font-size: 1.1rem;
-    }
-    .hero .links a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 25px;
-      border-radius: 6px;
-      background: #555;
-      color: white;
-      transition: background 0.3s;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    .hero .links a:hover {
-      background: #333;
+      padding: 20px;
     }
 
-    /* ===== Sections ===== */
-    section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: 40px auto;
-    }
-    section h3 {
+    h1 {
       font-size: 2rem;
-      color: #222;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #ccc;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    /* ===== Cards ===== */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      padding: 25px;
-      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-    .card h4 {
-      margin-top: 0;
-      color: #222;
-      font-size: 1.3rem;
-    }
-    .card p, .card ul {
-      color: #555;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-    .icon {
-      font-size: 2.2rem;
-      color: #666;
+      color: #1a2a6c;
       margin-bottom: 10px;
     }
 
-    /* ===== Footer ===== */
-    footer {
-      background: #333;
-      color: white;
+    h2 {
+      font-size: 1.4rem;
+      color: #444;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    body.dark h1 {
+      color: #d0d4ff;
+    }
+    body.dark h2 {
+      color: #ddd;
+      border-color: #444;
+    }
+
+    /* ===== Foto cuadrada ===== */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Contacto ===== */
+    .contact {
       text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-      font-size: 0.95rem;
+      margin-bottom: 30px;
     }
 
-    /* ===== Dark Mode ===== */
-    body.dark {
-      background: #1e1e1e;
-      color: #ddd;
+    .contact a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #1a2a6c;
+      font-weight: 500;
     }
-    body.dark header, body.dark footer, body.dark .topbar {
-      background: #111;
-      color: #ddd;
-    }
-    body.dark .hero, body.dark .card {
-      background: #2a2a2a;
-      color: #ddd;
-    }
-    body.dark nav a {
-      color: #ddd;
+    .contact a:hover {
+      color: #0d143d;
     }
 
-    /* ===== Responsive ===== */
-    @media(min-width: 1024px){
-      nav { gap: 50px; }
-      .hero h1 { font-size: 3.5rem; }
-      .hero h2 { font-size: 1.5rem; }
-      .hero p { font-size: 1.15rem; }
+    body.dark .contact a {
+      color: #d0d4ff;
+    }
+    body.dark .contact a:hover {
+      color: #a5afff;
+    }
+
+    /* ===== Listas ===== */
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* ===== Switches (idioma y modo) ===== */
+    .topbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 25px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px; width: 18px;
+      left: 3px; bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #1a2a6c;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* ===== Idioma ===== */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: #1a2a6c;
+    }
+
+    body.dark .lang-toggle {
+      color: #d0d4ff;
     }
   </style>
 </head>
 <body>
-
-  <!-- ===== Barra de botones ===== -->
+  <!-- Barra superior -->
   <div class="topbar">
-    <button onclick="setLanguage('es')">Español</button>
-    <button onclick="setLanguage('en')">English</button>
-    <button onclick="toggleMode()">🌞/🌙</button>
+    <!-- Idioma -->
+    <div class="lang-toggle">
+      ES | EN
+      <label class="switch">
+        <input type="checkbox" id="langSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Modo claro/oscuro -->
+    <div class="lang-toggle">
+      ☀️ | 🌙
+      <label class="switch">
+        <input type="checkbox" id="modeSwitch">
+        <span class="slider"></span>
+      </label>
+    </div>
   </div>
 
-  <!-- ===== Header ===== -->
-  <header>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#educacion">Educación</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section class="hero" id="inicio">
-    <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
-    <h1 id="name">Rodrigo Ochoa Hernández</h1>
-    <h2 id="title">Economista</h2>
-    <p id="intro">Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.</p>
-    <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> <span id="link-mail">Correo</span></a>
-      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> <span id="link-cv">Ver CV</span></a>
+  <div class="container">
+    <!-- Contacto -->
+    <div class="contact">
+      <a href="mailto:rodrigoochoahe@gmail.com">📧 Correo</a>
+      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">🔗 LinkedIn</a>
+      <a href="cv.pdf" target="_blank">📄 CV</a>
     </div>
-  </section>
 
-  <!-- ===== Scripts ===== -->
+    <!-- Foto -->
+    <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández" class="profile-pic">
+
+    <!-- Sobre mí -->
+    <h1>Rodrigo Ochoa Hernández</h1>
+    <h2>Sobre mí</h2>
+    <p>Soy Licenciado en Economía por la UNAM, interesado en temas de política fiscal, finanzas públicas y desarrollo económico. Mi enfoque es combinar el análisis riguroso con la aplicación práctica para contribuir al diseño de políticas económicas más eficientes y equitativas.</p>
+
+    <!-- Áreas de interés -->
+    <h2>Áreas de interés</h2>
+    <ul>
+      <li>Macroeconomía</li>
+      <li>Política fiscal</li>
+      <li>Finanzas públicas</li>
+      <li>Presupuesto público</li>
+
+    </ul>
+
+    <!-- Experiencia -->
+    <h2>Experiencia</h2>
+    <ul>
+      <li><strong>Institución X</strong> — Analista de economía (2023 - Actualidad)</li>
+      <li><strong>Proyecto Y</strong> — Investigación en política fiscal (2022)</li>
+      <li><strong>Servicio Social</strong> — Secretaría de Hacienda y Crédito Público (2021)</li>
+    </ul>
+  </div>
+
   <script>
-    function toggleMode() {
-      document.body.classList.toggle('dark');
-    }
+    // Switch modo claro/oscuro
+    const modeSwitch = document.getElementById("modeSwitch");
+    modeSwitch.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
 
-    function setLanguage(lang) {
-      if (lang === 'en') {
-        document.documentElement.lang = 'en';
-        document.getElementById("title").innerText = "Economist";
-        document.getElementById("intro").innerText = "I am an economist interested in public finance, fiscal policy, and macroeconomic analysis.";
-        document.getElementById("link-mail").innerText = "Email";
-        document.getElementById("link-cv").innerText = "View CV";
+    // Switch idioma (simulado)
+    const langSwitch = document.getElementById("langSwitch");
+    langSwitch.addEventListener("change", () => {
+      if (langSwitch.checked) {
+        alert("Idioma cambiado a EN (ejemplo)");
       } else {
-        document.documentElement.lang = 'es';
-        document.getElementById("title").innerText = "Economista";
-        document.getElementById("intro").innerText = "Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.";
-        document.getElementById("link-mail").innerText = "Correo";
-        document.getElementById("link-cv").innerText = "Ver CV";
+        alert("Idioma cambiado a ES (ejemplo)");
       }
-    }
+    });
   </script>
-
-  <footer>
-    &copy; 2025 Rodrigo Ochoa Hernández — Todos los derechos reservados
-  </footer>
-
 </body>
 </html>
