@@ -6,7 +6,7 @@
   <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
       background: #f0f2f5;
@@ -40,7 +40,7 @@
     nav a {
       color: white;
       font-weight: 500;
-      text-decoration: none;
+      text-decoration: none; /* Sin subrayado */
       transition: opacity 0.3s;
     }
     nav a:hover {
@@ -110,7 +110,7 @@
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 0; /* Foto cuadrada */
       border: 4px solid #ccc;
       margin-bottom: 20px;
     }
@@ -240,33 +240,39 @@
   <!-- ===== Hero ===== -->
   <section class="hero" id="inicio">
     <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
-    <h1>Rodrigo Ochoa Hernández</h1>
-    <h2>Economista</h2>
-    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.</p>
+    <h1 data-es="Rodrigo Ochoa Hernández" data-en="Rodrigo Ochoa Hernández">Rodrigo Ochoa Hernández</h1>
+    <h2 data-es="Economista" data-en="Economist">Economista</h2>
+    <p data-es="Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico."
+       data-en="I am an economist with an interest in public finance, fiscal policy, and macroeconomic analysis.">
+       Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.
+    </p>
     <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> Correo</a>
+      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> <span data-es="Correo" data-en="Email">Correo</span></a>
       <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> Ver CV</a>
+      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> <span data-es="Ver CV" data-en="View CV">Ver CV</span></a>
     </div>
   </section>
 
   <!-- ===== Sobre mí ===== -->
   <section id="sobre-mi">
-    <h3>Sobre mí</h3>
+    <h3 data-es="Sobre mí" data-en="About me">Sobre mí</h3>
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-account icon"></i>
-        <h4>Perfil</h4>
-        <p>Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.</p>
+        <h4 data-es="Perfil" data-en="Profile">Perfil</h4>
+        <p data-es="Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado."
+           data-en="Passionate about economics applied to fiscal policy and public finance, with interest in research and efficient management of state resources.">
+           Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.
+        </p>
       </div>
       <div class="card">
         <i class="mdi mdi-chart-line icon"></i>
-        <h4>Áreas de interés</h4>
+        <h4 data-es="Áreas de interés" data-en="Research Interests">Áreas de interés</h4>
         <ul>
-          <li>Macroeconomía</li>
-          <li>Política fiscal</li>
-          <li>Finanzas públicas</li>
-          <li>Presupuesto público</li>
+          <li data-es="Macroeconomía" data-en="Macroeconomics">Macroeconomía</li>
+          <li data-es="Política fiscal" data-en="Fiscal Policy">Política fiscal</li>
+          <li data-es="Finanzas públicas" data-en="Public Finance">Finanzas públicas</li>
+          <li data-es="Presupuesto público" data-en="Public Budget">Presupuesto público</li>
         </ul>
       </div>
     </div>
@@ -274,52 +280,67 @@
 
   <!-- ===== Experiencia ===== -->
   <section id="experiencia">
-    <h3>Experiencia</h3>
+    <h3 data-es="Experiencia" data-en="Experience">Experiencia</h3>
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-briefcase icon"></i>
-        <h4>Asistente de Investigación</h4>
-        <p><strong>Seminario de Credibilidad Macroeconómica, SCM</strong><br>febrero 2024 – febrero 2025<br>...</p>
+        <h4 data-es="Asistente de Investigación" data-en="Research Assistant">Asistente de Investigación</h4>
+        <p data-es="<strong>Seminario de Credibilidad Macroeconómica, SCM</strong><br>febrero 2024 – febrero 2025<br>..."
+           data-en="<strong>Seminar on Macroeconomic Credibility, SCM</strong><br>February 2024 – February 2025<br>...">
+           <strong>Seminario de Credibilidad Macroeconómica, SCM</strong><br>febrero 2024 – febrero 2025<br>...
+        </p>
       </div>
       <div class="card">
         <i class="mdi mdi-briefcase icon"></i>
-        <h4>Becario</h4>
-        <p><strong>Programa Universitario de Estudios del Desarrollo, PUED</strong><br>marzo 2024 – mayo 2024<br>...</p>
+        <h4 data-es="Becario" data-en="Intern">Becario</h4>
+        <p data-es="<strong>Programa Universitario de Estudios del Desarrollo, PUED</strong><br>marzo 2024 – mayo 2024<br>..."
+           data-en="<strong>University Program on Development Studies, PUED</strong><br>March 2024 – May 2024<br>...">
+           <strong>Programa Universitario de Estudios del Desarrollo, PUED</strong><br>marzo 2024 – mayo 2024<br>...
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ===== Educación ===== -->
   <section id="educacion">
-    <h3>Educación</h3>
+    <h3 data-es="Educación" data-en="Education">Educación</h3>
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-school icon"></i>
-        <h4>Licenciatura en Economía</h4>
-        <p><strong>Universidad Nacional Autónoma de México</strong><br>2021 - 2026</p>
+        <h4 data-es="Licenciatura en Economía" data-en="Bachelor's in Economics">Licenciatura en Economía</h4>
+        <p data-es="<strong>Universidad Nacional Autónoma de México</strong><br>2021 - 2026"
+           data-en="<strong>National Autonomous University of Mexico</strong><br>2021 - 2026">
+           <strong>Universidad Nacional Autónoma de México</strong><br>2021 - 2026
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ===== Proyectos ===== -->
   <section id="proyectos">
-    <h3>Proyectos</h3>
+    <h3 data-es="Proyectos" data-en="Projects">Proyectos</h3>
     <div class="card-container">
       <div class="card">
         <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 1</h4>
-        <p>Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.</p>
+        <h4 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h4>
+        <p data-es="Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo."
+           data-en="Analysis of fiscal sustainability in Mexico under medium-term scenarios.">
+           Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.
+        </p>
       </div>
       <div class="card">
         <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 2</h4>
-        <p>Evaluación de impacto de la política presupuestaria en crecimiento económico.</p>
+        <h4 data-es="Proyecto 2" data-en="Project 2">Proyecto 2</h4>
+        <p data-es="Evaluación de impacto de la política presupuestaria en crecimiento económico."
+           data-en="Impact evaluation of budgetary policy on economic growth.">
+           Evaluación de impacto de la política presupuestaria en crecimiento económico.
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Rodrigo Ochoa Hernández — Todos los derechos reservados
+    &copy; 2025 Rodrigo Ochoa Hernández — <span data-es="Todos los derechos reservados" data-en="All rights reserved">Todos los derechos reservados</span>
   </footer>
 
   <script>
@@ -329,14 +350,13 @@
       document.body.classList.toggle("dark");
     });
 
-    // Switch idioma (simulado)
+    // Switch idioma
     const langSwitch = document.getElementById("langSwitch");
     langSwitch.addEventListener("change", () => {
-      if (langSwitch.checked) {
-        alert("Idioma cambiado a EN (ejemplo)");
-      } else {
-        alert("Idioma cambiado a ES (ejemplo)");
-      }
+      const lang = langSwitch.checked ? "en" : "es";
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.innerHTML = el.getAttribute("data-" + lang);
+      });
     });
   </script>
 </body>
