@@ -3,170 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <title>Rodrigo Ochoa Hernández</title>
-  <link href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
+    /* ===== Estilos generales ===== */
     body {
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f2f5;
+      background: #f5f7fa;
       color: #333;
     }
 
-    /* ===== Header ===== */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Cabecera y menú ===== */
     header {
-      background: #333;
+      background: #1a2a6c;
       color: white;
-      padding: 15px 0;
+      padding: 20px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     nav {
       display: flex;
       justify-content: center;
       gap: 40px;
+      font-weight: 500;
       font-size: 1rem;
     }
-    nav a {
-      color: white;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
+
     nav a:hover {
-      opacity: 0.7;
+      text-decoration: underline;
     }
 
-    /* ===== Hero ===== */
+    /* ===== Sección principal ===== */
     .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 80px 40px;
-      background: #fff;
-      max-width: 1200px;
-      margin: 40px auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 80px 20px;
+      background: #ffffff;
     }
+
     .hero img {
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
       object-fit: cover;
-      border-radius: 8px;
-      border: 4px solid #ccc;
       margin-bottom: 20px;
+      border: 4px solid #1a2a6c;
     }
+
     .hero h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #222;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #1a2a6c;
     }
+
     .hero h2 {
+      font-size: 1.2rem;
       font-weight: 400;
       color: #555;
-      margin: 10px 0 25px;
-    }
-    .hero p {
-      max-width: 800px;
-      margin: auto;
-      color: #444;
-      line-height: 1.7;
-      font-size: 1.1rem;
-    }
-    .hero .links a {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 25px;
-      border-radius: 6px;
-      background: #555;
-      color: white;
-      transition: background 0.3s;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    .hero .links a:hover {
-      background: #333;
+      margin-bottom: 20px;
     }
 
-    /* ===== Sections ===== */
-    section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: 40px auto;
-    }
-    section h3 {
-      font-size: 2rem;
-      color: #222;
+    .hero p {
+      max-width: 600px;
+      line-height: 1.6;
       margin-bottom: 30px;
-      border-bottom: 2px solid #ccc;
+      color: #444;
+    }
+
+    .hero .links a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: #1a2a6c;
+      color: white;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .hero .links a:hover {
+      background: #0f1840;
+    }
+
+    /* ===== Secciones ===== */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h3 {
+      font-size: 1.8rem;
+      color: #1a2a6c;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1a2a6c;
       display: inline-block;
       padding-bottom: 5px;
     }
 
-    /* ===== Cards ===== */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+    section ul {
+      list-style: none;
+      padding: 0;
     }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      padding: 25px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-    .card h4 {
-      margin-top: 0;
-      color: #222;
-      font-size: 1.3rem;
-    }
-    .card p, .card ul {
-      color: #555;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-    .icon {
-      font-size: 2.2rem;
-      color: #666;
-      margin-bottom: 10px;
+
+    section li {
+      margin-bottom: 15px;
+      line-height: 1.5;
     }
 
     /* ===== Footer ===== */
     footer {
-      background: #333;
-      color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-      font-size: 0.95rem;
-    }
-
-    /* ===== Desktop Enhancements ===== */
-    @media(min-width: 1024px){
-      nav {
-        gap: 50px;
-      }
-      .hero h1 {
-        font-size: 3.5rem;
-      }
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-      .hero p {
-        font-size: 1.15rem;
-      }
+      padding: 30px 20px;
+      background: #1a2a6c;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
+  <!-- ===== Cabecera ===== -->
   <header>
     <nav>
       <a href="#inicio">Inicio</a>
@@ -178,87 +143,56 @@
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== Sección principal ===== -->
   <section class="hero" id="inicio">
     <img src="foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
     <h1>Rodrigo Ochoa Hernández</h1>
-    <h2>Economista</h2>
-    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.</p>
+    <h2>Licenciado en Economía — UNAM</h2>
+    <p>Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico. Me apasiona el estudio de los mercados y el diseño de estrategias basadas en evidencia para promover desarrollo económico y eficiencia en la gestión pública.</p>
     <div class="links">
-      <a href="mailto:rodrigoochoahe@gmail.com"><i class="mdi mdi-email"></i> Correo</a>
-      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank"><i class="mdi mdi-linkedin"></i> LinkedIn</a>
-      <a href="cv.pdf" target="_blank"><i class="mdi mdi-file"></i> Ver CV</a>
+      <a href="mailto:rodrigoochoahe@gmail.com">📧 Correo</a>
+      <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">🔗 LinkedIn</a>
+      <a href="cv.pdf" target="_blank">📄 Ver mi CV</a>
     </div>
   </section>
 
   <!-- ===== Sobre mí ===== -->
   <section id="sobre-mi">
     <h3>Sobre mí</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-account icon"></i>
-        <h4>Perfil</h4>
-        <p>Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-chart-line icon"></i>
-        <h4>Áreas de interés</h4>
-        <ul>
-          <li>Macroeconomía</li>
-          <li>Política fiscal</li>
-          <li>Finanzas públicas</li>
-          <li>Presupuesto público</li>
-        </ul>
-      </div>
-    </div>
+    <p>Breve resumen de tu trayectoria, habilidades y áreas de interés. Puedes destacar proyectos, investigaciones o logros relevantes.</p>
   </section>
 
   <!-- ===== Experiencia ===== -->
-<section id="experiencia">
-  <h3>Experiencia</h3>
-  <div class="card-container">
-    <div class="card">
-      <i class="mdi mdi-briefcase icon"></i>
-      <h4>Asistente de Investigación</h4>
-      <p><strong>Seminario de Credibilidad Macroeconómica, SCM</strong><br>febrero 2024 – febrero 2025<br>...</p>
-    </div>
-    
-      <div class="card">
-      <i class="mdi mdi-briefcase icon"></i>
-      <h4>Becario</h4>
-      <p><strong>Programa Universitario de Estudios del Desarrollo, PUED</strong><br>marzo 2024 – mayo 2024<br>...</p>
-    </div>
-  </div>
-</section>
-
+  <section id="experiencia">
+    <h3>Experiencia</h3>
+    <ul>
+      <li><strong>Nombre de la institución o empresa</strong> — Puesto (Año - Año)</li>
+      <li>Descripción breve de responsabilidades y logros.</li>
+    </ul>
+  </section>
 
   <!-- ===== Educación ===== -->
   <section id="educacion">
     <h3>Educación</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-school icon"></i>
-        <h4>Licenciatura en Economía</h4>
-        <p><strong>Universidad Nacional Autónoma de México</strong><br>2021 - 2026</p>
-      </div>
-    </div>
+    <ul>
+      <li><strong>Licenciatura en Economía</strong> — UNAM (Año de inicio - Año de término)</li>
+      <li>Otros estudios relevantes, cursos o certificaciones.</li>
+    </ul>
   </section>
 
   <!-- ===== Proyectos ===== -->
   <section id="proyectos">
     <h3>Proyectos</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 1</h4>
-        <p>Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.</p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4>Proyecto 2</h4>
-        <p>Evaluación de impacto de la política presupuestaria en crecimiento económico.</p>
-      </div>
-    </div>
+    <ul>
+      <li>Nombre del proyecto — breve descripción.</li>
+      <li>Nombre del proyecto — breve descripción.</li>
+    </ul>
+  </section>
+
+  <!-- ===== Contacto ===== -->
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <p>Puedes escribirme a <a href="mailto:rodrigoochoahe@gmail.com">rodrigoochoahe@gmail.com</a> o conectarte conmigo a través de <a href="https://www.linkedin.com/in/rodrigo-ochoa-hern%C3%A1ndez-489479314/" target="_blank">LinkedIn</a>.</p>
   </section>
 
   <footer>
