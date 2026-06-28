@@ -193,16 +193,40 @@
       margin-bottom: 10px;
     }
 
-    /* ===== Footer ===== */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-      font-size: 0.95rem;
-    }
-  </style>
+/* ===== Footer ===== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}
+
+/* ===== Enlaces de investigaciones ===== */
+.project-link{
+  display:inline-block;
+  margin-top:15px;
+  text-decoration:none;
+  font-weight:600;
+  color:#1a2a6c;
+  transition:all .3s ease;
+}
+
+.project-link:hover{
+  color:#3d5afe;
+  transform:translateX(4px);
+}
+
+body.dark .project-link{
+  color:#7ea8ff;
+}
+
+body.dark .project-link:hover{
+  color:#a9c3ff;
+}
+
+</style>
 </head>
 <body>
 
@@ -290,7 +314,6 @@
 
       <strong>Centro de Investigación Económica y Presupuestaria (CIEP)</strong><br>
       Febrero 2026 – Presente<br><br>
-      Investigación en finanzas públicas, política fiscal y análisis macroeconómico. Elaboración de estudios técnicos, análisis de sostenibilidad fiscal y evaluación de las finanzas públicas de México.
       </p>
     </div>
 
@@ -305,7 +328,6 @@
 
       <strong>Auditoría Superior de la Federación (ASF)</strong><br>
       Septiembre 2025 – Marzo 2026<br><br>
-      Auxiliar de auditoría. Participación en actividades relacionadas con la fiscalización del gasto público y el análisis de información financiera del sector público.
       </p>
     </div>
 
@@ -320,7 +342,6 @@
 
       <strong>Seminario de Credibilidad Macroeconómica (SCM)</strong><br>
       Febrero 2024 – Febrero 2025<br><br>
-      Formación de jóvenes investigadores y participación en proyectos de investigación en macroeconomía y política económica.
       </p>
     </div>
 
@@ -335,7 +356,6 @@
 
       <strong>Programa Universitario de Estudios del Desarrollo (PUED), UNAM</strong><br>
       Marzo 2024 – Mayo 2024<br><br>
-      Colaboración en la elaboración del <em>Informe del Desarrollo en México 2024</em>, mediante recopilación, análisis y procesamiento de información económica.
       </p>
     </div>
 
@@ -357,28 +377,62 @@
     </div>
   </section>
 
-  <!-- ===== Proyectos ===== -->
-  <section id="proyectos">
-    <h3 data-es="Proyectos" data-en="Projects">Proyectos</h3>
-    <div class="card-container">
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h4>
-        <p data-es="Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo."
-           data-en="Analysis of fiscal sustainability in Mexico under medium-term scenarios.">
-           Análisis de sostenibilidad fiscal en México bajo escenarios de mediano plazo.
-        </p>
-      </div>
-      <div class="card">
-        <i class="mdi mdi-lightbulb-on icon"></i>
-        <h4 data-es="Proyecto 2" data-en="Project 2">Proyecto 2</h4>
-        <p data-es="Evaluación de impacto de la política presupuestaria en crecimiento económico."
-           data-en="Impact evaluation of budgetary policy on economic growth.">
-           Evaluación de impacto de la política presupuestaria en crecimiento económico.
-        </p>
-      </div>
+<!-- ===== Investigaciones ===== -->
+<section id="proyectos">
+  <h3 data-es="Investigaciones" data-en="Research">Investigaciones</h3>
+
+  <div class="card-container">
+
+    <div class="card">
+      <i class="mdi mdi-file-document-outline icon"></i>
+
+      <h4
+      data-es="Hacia el fortalecimiento de la inversión pública: Planes y acciones 2025–2030"
+      data-en="Strengthening Public Investment: Plans and Actions 2025–2030">
+      Hacia el fortalecimiento de la inversión pública: Planes y acciones 2025–2030
+      </h4>
+
+      <p
+      data-es="Análisis de las principales estrategias del Gobierno Federal para fortalecer la inversión pública durante el periodo 2025–2030, así como sus posibles alcances, limitaciones y retos para la sostenibilidad fiscal."
+      data-en="Analysis of the Federal Government's main strategies to strengthen public investment between 2025 and 2030, assessing their scope, limitations and fiscal sustainability challenges.">
+
+      Análisis de las principales estrategias del Gobierno Federal para fortalecer la inversión pública durante el periodo 2025–2030, así como sus posibles alcances, limitaciones y retos para la sostenibilidad fiscal.
+      </p>
+
+      <a href="https://ciep.mx/hacia-el-fortalecimiento-de-la-inversion-publica-planes-y-acciones-2025-2030/"
+         target="_blank"
+         class="project-link">
+         Leer investigación →
+      </a>
+
     </div>
-  </section>
+
+    <div class="card">
+      <i class="mdi mdi-file-document-outline icon"></i>
+
+      <h4
+      data-es="Inversión pública, género y cuidados en México: infraestructura para una mayor igualdad"
+      data-en="Public Investment, Gender and Care in Mexico: Infrastructure for Greater Equality">
+      Inversión pública, género y cuidados en México: infraestructura para una mayor igualdad
+      </h4>
+
+      <p
+      data-es="Estudio sobre el papel de la infraestructura social como instrumento para reducir brechas de género, fortalecer los sistemas de cuidados y ampliar las oportunidades económicas de las mujeres."
+      data-en="Study on the role of social infrastructure as a tool to reduce gender gaps, strengthen care systems and expand women's economic opportunities.">
+
+      Estudio sobre el papel de la infraestructura social como instrumento para reducir brechas de género, fortalecer los sistemas de cuidados y ampliar las oportunidades económicas de las mujeres.
+      </p>
+
+      <a href="https://ciep.mx/inversion-publica-genero-y-cuidados-en-mexico-infraestructura-para-una-mayor-igualdad/"
+         target="_blank"
+         class="project-link">
+         Leer investigación →
+      </a>
+
+    </div>
+
+  </div>
+</section>
 
   <footer>
     &copy; 2025 Rodrigo Ochoa Hernández — <span data-es="Todos los derechos reservados" data-en="All rights reserved">Todos los derechos reservados</span>
