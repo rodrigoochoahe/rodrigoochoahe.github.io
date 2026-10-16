@@ -265,6 +265,89 @@ body.dark .project-link:hover{
   color:#a9c3ff;
 }
 
+
+/* ===== Sobre mí: diseño editorial ===== */
+#sobre-mi .sobre-mi-contenido {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 55px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+#sobre-mi .perfil,
+#sobre-mi .intereses {
+  min-width: 0;
+}
+
+#sobre-mi .sobre-mi-contenido h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 18px;
+}
+
+#sobre-mi .perfil p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  line-height: 1.85;
+  color: #444;
+  margin: 0;
+  max-width: 650px;
+}
+
+#sobre-mi .intereses ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#sobre-mi .intereses li {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #333;
+  border: 1px solid #cbd2e1;
+  border-radius: 30px;
+  padding: 10px 17px;
+  background: #fff;
+}
+
+/* Modo oscuro */
+body.dark #sobre-mi .sobre-mi-contenido h4 {
+  color: #f5f5f5;
+}
+
+body.dark #sobre-mi .perfil p {
+  color: #ddd;
+}
+
+body.dark #sobre-mi .intereses li {
+  color: #f5f5f5;
+  background: #252525;
+  border-color: #555;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+  #sobre-mi .sobre-mi-contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  #sobre-mi .perfil p {
+    font-size: 1.1rem;
+  }
+
+  #sobre-mi .sobre-mi-contenido h4 {
+    font-size: 1.4rem;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -300,7 +383,7 @@ body.dark .project-link:hover{
     <img src="Foto.jpg" alt="Foto de Rodrigo Ochoa Hernández">
     <h1 data-es="Rodrigo Ochoa Hernández" data-en="Rodrigo Ochoa Hernández">Rodrigo Ochoa Hernández</h1>
     <h2 data-es="Economista" data-en="Economist">Economista</h2>
-    <p data-es="Soy economista con interés en finanzas públicas, política fiscal y análisis macroeconómico."
+    <p data-es="Economista con interés en finanzas públicas, política fiscal y análisis macroeconómico."
        data-en="I am an economist with an interest in public finance, fiscal policy, and macroeconomic analysis.">
       Economista con interés en finanzas públicas, política fiscal y análisis macroeconómico.
     </p>
@@ -312,30 +395,39 @@ body.dark .project-link:hover{
     </div>
   </section>
 
+
 <!-- ===== Sobre mí ===== -->
 <section id="sobre-mi">
   <h3 data-es="Sobre mí" data-en="About me">Sobre mí</h3>
 
   <div class="sobre-mi-contenido">
-    <div>
+    <div class="perfil">
       <h4 data-es="Perfil" data-en="Profile">Perfil</h4>
-      <p data-es="Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado."
-         data-en="Passionate about economics applied to fiscal policy and public finance, with interest in research and efficient management of state resources.">
-         Apasionado por la economía aplicada a la política fiscal y las finanzas públicas, con interés en investigación y gestión eficiente de los recursos del Estado.
+      <p
+        data-es="Soy economista con interés en el análisis de las finanzas públicas, la política fiscal y la macroeconomía."
+        data-en="I am an economist interested in public finance, fiscal policy, and macroeconomic analysis.">
+        Soy economista con interés en el análisis de las finanzas públicas, la política fiscal y la macroeconomía.
       </p>
     </div>
 
-    <div>
-      <h4 data-es="Áreas de interés" data-en="Research Interests">Áreas de interés</h4>
+    <div class="intereses">
+      <h4 data-es="Áreas de interés"
+          data-en="Research interests">Áreas de interés</h4>
+
       <ul>
-        <li data-es="Macroeconomía" data-en="Macroeconomics">Macroeconomía</li>
-        <li data-es="Política fiscal" data-en="Fiscal Policy">Política fiscal</li>
-        <li data-es="Finanzas públicas" data-en="Public Finance">Finanzas públicas</li>
-        <li data-es="Presupuesto público" data-en="Public Budget">Presupuesto público</li>
+        <li data-es="Macroeconomía"
+            data-en="Macroeconomics">Macroeconomía</li>
+        <li data-es="Política fiscal"
+            data-en="Fiscal policy">Política fiscal</li>
+        <li data-es="Finanzas públicas"
+            data-en="Public finance">Finanzas públicas</li>
+        <li data-es="Presupuesto público"
+            data-en="Public budgeting">Presupuesto público</li>
       </ul>
     </div>
   </div>
 </section>
+
 
 <!-- ===== Experiencia ===== -->
 <section id="experiencia">
